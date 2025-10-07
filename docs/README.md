@@ -40,6 +40,7 @@ Aplicación para dispositivos móviles (iOS/Android) para:
 
 ## Estructura de la documentación
 - [Arquitectura del Sistema](arquitectura.md)
+- [Guía Portal de Gestores](guia_portal_gestores.md)
 - [Guía de usuario](guia_usuarios.md)
 - [Guía técnica](guia_tecnica.md)
 - [Procesos operativos](procesos_operativos.md)

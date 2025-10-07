@@ -12,6 +12,82 @@ Gresst es una plataforma multicomponente diseñada para gestionar el ciclo compl
 
 **Propósito:** Interfaz web para empresas gestoras que administran la recolección y tratamiento de residuos.
 
+#### Estructura del Menú Principal
+
+El Portal de Gestores presenta un menú lateral izquierdo que organiza todas las funcionalidades del sistema para facilitar la gestión operativa y administrativa:
+
+##### 📋 **Solicitudes**
+- **Funcionalidad:** Gestión integral de todas las solicitudes de recolección de residuos
+- **Incluye:** 
+  - Recepción de nuevas solicitudes
+  - Asignación a vehículos y conductores
+  - Seguimiento del estado de las solicitudes
+  - Reprogramación y cancelaciones
+  - Priorización de servicios
+
+##### 🔄 **Procesos**
+- **Funcionalidad:** Supervisión y gestión de flujos de trabajo operativos
+- **Incluye:**
+  - Planificación de rutas de recolección
+  - Ejecución y seguimiento en tiempo real
+  - Gestión de procesos de tratamiento
+  - Control de calidad en cada etapa
+  - Optimización de operaciones
+
+##### 🛡️ **Certificados**
+- **Funcionalidad:** Generación y administración de documentación legal
+- **Incluye:**
+  - Certificados de disposición final
+  - Manifiestos de transporte
+  - Documentos de cumplimiento normativo
+  - Firmas digitales y validaciones
+  - Archivo y consulta de documentos
+
+##### 📦 **Inventario**
+- **Funcionalidad:** Control y seguimiento de recursos operativos
+- **Incluye:**
+  - Inventario de residuos recolectados
+  - Control de materiales y equipos
+  - Gestión de almacenes y centros de acopio
+  - Seguimiento de existencias
+  - Alertas de stock mínimo
+
+##### 🔗 **Integraciones**
+- **Funcionalidad:** Configuración de conexiones con sistemas externos
+- **Incluye:**
+  - APIs de terceros
+  - Sistemas ERP empresariales
+  - Plataformas de geolocalización
+  - Sistemas de facturación
+  - Dispositivos IoT y sensores
+
+##### 📊 **Históricos**
+- **Funcionalidad:** Acceso a registros históricos y auditoría
+- **Incluye:**
+  - Historial de operaciones completadas
+  - Registro de movimientos de inventario
+  - Log de actividades del sistema
+  - Trazabilidad completa de residuos
+  - Consultas históricas avanzadas
+
+##### 📈 **Reportes**
+- **Funcionalidad:** Generación de informes analíticos y estadísticos
+- **Incluye:**
+  - Reportes de rendimiento operativo
+  - Estadísticas de cumplimiento
+  - Análisis de costos y eficiencia
+  - Indicadores clave de gestión
+  - Exportación a múltiples formatos
+
+##### ⚙️ **Configuración**
+- **Funcionalidad:** Administración del sistema y personalización
+- **Incluye:**
+  - Perfiles de usuario y permisos
+  - Configuración de notificaciones
+  - Parámetros del sistema
+  - Personalización de interfaz
+  - Mantenimiento y respaldos
+
 #### Funcionalidades principales:
 - **Gestión de solicitudes:** Recepción y asignación de órdenes de recolección
 - **Administración de flota:** Control de vehículos, conductores y rutas
