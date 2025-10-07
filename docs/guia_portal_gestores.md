@@ -484,17 +484,178 @@ El formulario de solicitud está organizado en secciones lógicas para facilitar
 
 **Descripción:** Monitoreo y gestión de flujos de trabajo operativos.
 
-#### Funcionalidades disponibles:
-- **Planificación de Rutas:** Optimización automática de recorridos
-- **Ejecución en Tiempo Real:** Seguimiento GPS de vehículos activos
-- **Control de Calidad:** Verificación de procesos en cada etapa
-- **Alertas:** Notificaciones de incidencias o retrasos
+#### Transportes Pendientes
 
-#### Dashboard de Procesos:
-- **Vehículos Activos:** Lista de vehículos en operación
-- **Rutas Asignadas:** Mapa con rutas planificadas
-- **Tiempo Estimado:** Duración prevista de cada proceso
-- **Estado Operativo:** Indicadores de rendimiento en tiempo real
+![Transportes Pendientes](./images/Transportes_pendientes_gestor.png)
+*Vista de transportes pendientes mostrando la gestión de rutas y vehículos en proceso*
+
+##### **Gestión de Transportes**
+
+La sección de Procesos/Transporte permite supervisar y gestionar todos los transportes de residuos desde su asignación hasta su finalización:
+
+###### **📊 Panel de Control de Transportes**
+- **Transportes Pendientes:** Solicitudes asignadas esperando inicio
+- **En Proceso:** Transportes actualmente en ejecución
+- **Completados Hoy:** Servicios finalizados en la fecha actual
+- **Retrasados:** Transportes que excedieron el tiempo estimado
+- **Alertas:** Notificaciones de incidencias o problemas
+
+###### **🚚 Lista de Transportes**
+Cada transporte muestra información detallada:
+- **ID de Transporte:** Identificador único del proceso
+- **Vehículo:** Tipo y capacidad del vehículo asignado
+- **Conductor:** Nombre del conductor responsable
+- **Ruta:** Origen y destino del transporte
+- **Estado:** Pendiente, En Proceso, En Ruta, Completado
+- **Progreso:** Porcentaje de avance del transporte
+- **Tiempo Estimado:** Duración prevista del servicio
+- **Acciones:** Botones para gestionar cada transporte
+
+###### **🗺️ Visualización de Rutas**
+- **Mapa Interactivo:** Vista geográfica de todas las rutas
+- **Puntos de Recolección:** Ubicaciones marcadas en el mapa
+- **Trayectoria GPS:** Ruta optimizada para cada vehículo
+- **Estado en Tiempo Real:** Posición actual de cada vehículo
+- **Tráfico:** Información de congestión vehicular
+
+#### Funcionalidades del Módulo Transporte
+
+##### **📋 Planificación de Rutas**
+- **Optimización Automática:** Algoritmos para rutas eficientes
+- **Asignación de Vehículos:** Selección automática según capacidad
+- **Agrupación Geográfica:** Agrupar recolecciones por zona
+- **Estimación de Tiempo:** Cálculo basado en distancia y tráfico
+- **Validación de Restricciones:** Verificar limitaciones de acceso
+
+##### **🚛 Gestión de Vehículos**
+- **Estado de Flota:** Disponibilidad y ubicación de vehículos
+- **Capacidad de Carga:** Control de peso y volumen máximo
+- **Mantenimiento:** Programación de servicios preventivos
+- **Combustible:** Monitoreo de consumo y nivel
+- **Documentación:** Licencias, seguros y permisos vigentes
+
+##### **👨‍💼 Gestión de Conductores**
+- **Disponibilidad:** Horarios y días de trabajo
+- **Licencias:** Verificación de permisos de manejo
+- **Capacitación:** Certificaciones y entrenamientos
+- **Rendimiento:** Métricas de eficiencia y puntualidad
+- **Comunicación:** Canales de contacto directo
+
+##### **⏰ Monitoreo en Tiempo Real**
+- **Seguimiento GPS:** Posición actual de cada vehículo
+- **Progreso de Ruta:** Avance en tiempo real
+- **Alertas Automáticas:** Notificaciones de incidencias
+- **Comunicación Bidireccional:** Chat con conductores
+- **Actualización de Estados:** Cambios automáticos según progreso
+
+#### Estados de Transporte
+
+| Estado | Descripción | Acciones Disponibles |
+|--------|-------------|---------------------|
+| **🟡 Pendiente** | Transporte asignado, sin iniciar | Iniciar, Modificar, Cancelar |
+| **🔵 En Cola** | Esperando turno de salida | Priorizar, Reprogramar |
+| **🟢 En Proceso** | Transporte iniciado | Monitorear, Completar |
+| **🚛 En Ruta** | Vehículo en camino | Seguir, Contactar |
+| **✅ Completado** | Transporte finalizado | Verificar, Generar certificado |
+| **❌ Retrasado** | Excede tiempo estimado | Investigar, Reasignar |
+| **⚠️ Con Problemas** | Incidencia reportada | Resolver, Escalar |
+
+#### Proceso de Gestión de Transportes
+
+##### **Paso 1: Asignación**
+1. **Seleccionar solicitudes** para transportar
+2. **Verificar disponibilidad** de vehículos y conductores
+3. **Planificar ruta óptima** usando algoritmos
+4. **Asignar recursos** (vehículo + conductor)
+5. **Confirmar programación** y horarios
+
+##### **Paso 2: Inicio del Transporte**
+1. **Verificar preparación** del vehículo
+2. **Confirmar presencia** del conductor
+3. **Validar documentación** requerida
+4. **Iniciar seguimiento GPS**
+5. **Notificar inicio** al generador
+
+##### **Paso 3: Monitoreo**
+1. **Seguir progreso** en tiempo real
+2. **Verificar cumplimiento** de ruta
+3. **Responder a alertas** o incidencias
+4. **Mantener comunicación** con conductor
+5. **Actualizar estados** según avance
+
+##### **Paso 4: Finalización**
+1. **Confirmar llegada** al destino
+2. **Verificar descarga** completa
+3. **Obtener evidencia** fotográfica
+4. **Actualizar estado** a completado
+5. **Generar documentación** final
+
+#### Alertas y Notificaciones
+
+##### **Tipos de Alertas:**
+- **🚨 Emergencia:** Accidente o problema grave
+- **⏰ Retraso:** Transporte excede tiempo estimado
+- **📍 Desvío:** Vehículo fuera de ruta planificada
+- **⛽ Combustible:** Nivel bajo de combustible
+- **🔧 Mantenimiento:** Problema mecánico reportado
+- **📞 Comunicación:** Conductor no responde
+
+##### **Canales de Notificación:**
+- **Sistema interno:** Alertas en el dashboard
+- **Email:** Notificaciones por correo electrónico
+- **SMS:** Mensajes de texto para urgencias
+- **Push notifications:** Alertas en dispositivos móviles
+- **WhatsApp:** Mensajes directos al conductor
+
+#### Optimización de Rutas
+
+##### **Factores de Optimización:**
+- **Distancia:** Minimizar kilometraje total
+- **Tiempo:** Reducir duración del servicio
+- **Combustible:** Optimizar consumo de gasolina
+- **Tráfico:** Evitar horas pico y congestiones
+- **Capacidad:** Maximizar carga por vehículo
+
+##### **Algoritmos Utilizados:**
+- **TSP (Traveling Salesman Problem):** Ruta más corta
+- **VRP (Vehicle Routing Problem):** Múltiples vehículos
+- **Machine Learning:** Aprendizaje de patrones históricos
+- **Real-time Traffic:** Integración con datos de tráfico
+- **Weather Integration:** Consideración de condiciones climáticas
+
+#### Reportes y Analytics
+
+##### **Métricas de Rendimiento:**
+- **Tiempo promedio** por transporte
+- **Kilometraje total** por vehículo
+- **Eficiencia de rutas** (tiempo real vs estimado)
+- **Consumo de combustible** por vehículo
+- **Puntualidad** de conductores
+
+##### **Reportes Disponibles:**
+- **Reporte diario:** Resumen de transportes del día
+- **Reporte semanal:** Análisis de rendimiento semanal
+- **Reporte mensual:** Estadísticas de eficiencia mensual
+- **Reporte por conductor:** Rendimiento individual
+- **Reporte por vehículo:** Utilización de flota
+
+#### Consejos para Gestión Eficiente
+
+##### **Mejores Prácticas:**
+1. **Planificar con anticipación** las rutas del día
+2. **Monitorear constantemente** el progreso de transportes
+3. **Responder rápidamente** a alertas e incidencias
+4. **Mantener comunicación** fluida con conductores
+5. **Analizar métricas** para mejorar procesos
+
+##### **Optimización de Recursos:**
+- **Agrupar recolecciones** por zona geográfica
+- **Balancear carga** entre vehículos disponibles
+- **Considerar horarios** de tráfico y restricciones
+- **Planificar mantenimiento** preventivo de vehículos
+- **Capacitar conductores** en rutas y procedimientos
+
+---
 
 ---
 
